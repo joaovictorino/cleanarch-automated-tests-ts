@@ -1,7 +1,7 @@
 export class NumeroConta {
     private _numero: string;
 
-    constructor(numero: string){
+    public constructor(numero: string){
         this.validar(numero);
         this._numero = numero;
     }

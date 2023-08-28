@@ -4,7 +4,7 @@ export class Conta {
     private _numeroConta: NumeroConta;
     private _saldo: number;
 
-    constructor(numero: string, saldo: number){
+    public constructor(numero: string, saldo: number){
       this._numeroConta = new NumeroConta(numero);
       this._saldo = saldo;
     }
@@ -26,6 +26,10 @@ export class Conta {
     
     public get saldo(): number {
       return this._saldo;
+    }
+
+    public get numero(): string {
+      return this._numeroConta.numero;
     }
 
     private validarValor(valor: number): void {

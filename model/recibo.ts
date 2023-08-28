@@ -1,11 +1,11 @@
 export class Recibo {
     private _codigo: string;
 
-    constructor(){
+    public constructor(){
         this._codigo = this.gerarCodigo();
     }
 
-    get codigo(): string {
+    public get codigo(): string {
         return this._codigo;
     }
 
