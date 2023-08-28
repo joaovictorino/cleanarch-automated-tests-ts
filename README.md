@@ -32,3 +32,6 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Unindo recibo e transferência](https://gist.github.com/joaovictorino/39976a2704232a417292306fe434a6c0)   
 
 ## Aula 02
+[Criando a camada de aplicação](https://gist.github.com/joaovictorino/fd80a207c35bef460cee34291022a3ca)   
+[Validando fluxos alternativos de aplicação](https://gist.github.com/joaovictorino/50abe117aaa52633b88dec92b730b8fc)   
+[Refatorando o teste de aplicação](https://gist.github.com/joaovictorino/52600cfea9e651fab9212e9a385bd175)   

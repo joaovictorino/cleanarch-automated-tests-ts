@@ -8,14 +8,14 @@ describe("Número Conta", () => {
   });
 
   test("conta com quatro dígitos", async () => {
-    expect(() => { new NumeroConta("3456"); }).toThrow(Error);
+    expect(() => { new NumeroConta("3456"); }).toThrow("número de conta inválida");
   });
 
   test("conta com sete dígitos", async () => {
-    expect(() => { new NumeroConta("1234567"); }).toThrow(Error);
+    expect(() => { new NumeroConta("1234567"); }).toThrow("número de conta inválida");
   });
 
   test("conta com valor que não sejam digitos", async () => {
-    expect(() => { new NumeroConta("abc123"); }).toThrow(Error);
+    expect(() => { new NumeroConta("abc123"); }).toThrow("número de conta inválida");
   });
 });

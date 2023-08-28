@@ -9,17 +9,17 @@ describe("Conta", () => {
 
   test("sacar com valor zerado", async () => {
     const conta = criarConta();
-    expect(() => { conta.sacar(0); }).toThrow(Error);
+    expect(() => { conta.sacar(0); }).toThrow("valor não pode ser igual ou menor que zero");
   });
 
   test("sacar com valor negativo", async () => {
     const conta = criarConta();
-    expect(() => { conta.sacar(-5.0); }).toThrow(Error);
+    expect(() => { conta.sacar(-5.0); }).toThrow("valor não pode ser igual ou menor que zero");
   });
 
   test("sacar valor acima do saldo", async () => {
     const conta = criarContaSaldo199();
-    expect(() => { conta.sacar(200.0); }).toThrow(Error);
+    expect(() => { conta.sacar(200.0); }).toThrow("saldo indisponível para operação");
   });
 
   test("depositar com sucesso", async () => {
@@ -30,12 +30,12 @@ describe("Conta", () => {
 
   test("depositar com valor zerado", async () => {
     const conta = criarConta();
-    expect(() => { conta.depositar(0); }).toThrow(Error);
+    expect(() => { conta.depositar(0); }).toThrow("valor não pode ser igual ou menor que zero");
   });
 
   test("depositar com valor negativo", async () => {
     const conta = criarConta();
-    expect(() => { conta.depositar(-5.0); }).toThrow(Error);
+    expect(() => { conta.depositar(-5.0); }).toThrow("valor não pode ser igual ou menor que zero");
   });
 });
 

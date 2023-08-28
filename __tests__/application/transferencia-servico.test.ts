@@ -6,11 +6,7 @@ import { Conta } from "../../model/conta";
 describe("Transferência serviço", () =>{
 
     test("transferir com sucesso", () => {
-        const repositorio = new MemoriaContaRepositorio();
-        const contaOrigem = new Conta("123456", 5000);
-        const contaDestino = new Conta("654321", 5000);
-        repositorio.adicionar(contaOrigem);
-        repositorio.adicionar(contaDestino);
+        const repositorio = criarContaRepositorio();
 
         const transferenciaServico = new TransferenciaServico(repositorio);
 
@@ -23,4 +19,33 @@ describe("Transferência serviço", () =>{
         expect(recibo.length).toBe(6);
     });
 
+    test("conta de origem não encontrada", () => {
+        const repositorio = criarContaRepositorio();
+
+        const transferenciaServico = new TransferenciaServico(repositorio);
+
+        const dto = new TransferenciaDTO("111111", "654321", 100.0);
+
+        expect(() => { transferenciaServico.transferir(dto); }).toThrow("conta de origem não encontrada");
+    });
+
+    test("conta de destino não encontrada", () => {
+        const repositorio = criarContaRepositorio();
+
+        const transferenciaServico = new TransferenciaServico(repositorio);
+
+        const dto = new TransferenciaDTO("123456", "222222", 100.0);
+
+        expect(() => { transferenciaServico.transferir(dto); }).toThrow("conta de destino não encontrada");
+    });
+
 });
+
+function criarContaRepositorio() {
+    const repositorio = new MemoriaContaRepositorio();
+    const contaOrigem = new Conta("123456", 5000);
+    const contaDestino = new Conta("654321", 5000);
+    repositorio.adicionar(contaOrigem);
+    repositorio.adicionar(contaDestino);
+    return repositorio;
+}
