@@ -1,7 +1,7 @@
-import { Repositorio } from "../model/contract/repositorio";
-import { Conta } from "../model/conta";
-import { TransferenciaDTO } from "./dto/transferencia-dto";
-import { TransferenciaValor } from "../model/service/transferencia-valor";
+import { Repositorio } from "../model/contract/Repositorio";
+import { Conta } from "../model/Conta";
+import { TransferenciaDTO } from "./dto/TransferenciaDTO";
+import { TransferenciaValor } from "../model/service/TransferenciaValor";
 
 export class TransferenciaServico {
     private _repositorio: Repositorio<Conta, string>;

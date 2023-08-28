@@ -8,6 +8,11 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 - A conta de origem precisa ter saldo superior ou igual ao valor de transferência
 - O valor de transferência deve ser maior que zero
 
+## Instalação VSCode, Git, Node e Docker
+[VSCode no Windows](https://www.youtube.com/watch?v=zPHbeSBvdkg)   
+[Node v18 no Windows](https://www.youtube.com/watch?v=_R7cSg4um00)   
+[Git no Windows](https://www.youtube.com/watch?v=_RcVweTCvRE)   
+[Docker Desktop no Windows](https://www.youtube.com/watch?v=n0bxjsGi_BY)   
 
 # Atividades
 

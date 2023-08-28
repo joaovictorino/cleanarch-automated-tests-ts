@@ -1,4 +1,4 @@
-import { NumeroConta } from "./numero-conta";
+import { NumeroConta } from "./NumeroConta";
 
 export class Conta {
     private _numeroConta: NumeroConta;

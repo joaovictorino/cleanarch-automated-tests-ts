@@ -1,4 +1,4 @@
-import { Recibo } from "../../model/recibo"
+import { Recibo } from "../../src/model/Recibo"
 
 describe("Recibo", () => {
   test("criar com sucesso", async () => {

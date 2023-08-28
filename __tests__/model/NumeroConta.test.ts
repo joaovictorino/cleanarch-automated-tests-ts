@@ -1,4 +1,4 @@
-import { NumeroConta } from "../../model/numero-conta";
+import { NumeroConta } from "../../src/model/NumeroConta";
 
 describe("Número Conta", () => {
   test("conta com seis dígitos", async () => {

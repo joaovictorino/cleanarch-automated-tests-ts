@@ -1,5 +1,5 @@
-import { Conta } from "../conta";
-import { Recibo } from "../recibo";
+import { Conta } from "../Conta";
+import { Recibo } from "../Recibo";
 
 export class TransferenciaValor {
     public transferir(contaOrigem: Conta, contaDestino: Conta, valor: number): Recibo {

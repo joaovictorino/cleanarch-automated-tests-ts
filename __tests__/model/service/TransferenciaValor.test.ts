@@ -1,5 +1,5 @@
-import { Conta } from "../../../model/conta";
-import { TransferenciaValor } from "../../../model/service/transferencia-valor";
+import { Conta } from "../../../src/model/Conta";
+import { TransferenciaValor } from "../../../src/model/service/TransferenciaValor";
 
 describe("Transferência Valor", () => {
     test("transferência de valor entre contas", async () => {

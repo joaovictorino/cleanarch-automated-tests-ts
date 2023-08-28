@@ -1,7 +1,7 @@
-import { TransferenciaServico } from "../../application/transferencia-servico";
-import { MemoriaContaRepositorio } from "../fake/memoria-conta-repositorio";
-import { TransferenciaDTO } from "../../application/dto/transferencia-dto";
-import { Conta } from "../../model/conta";
+import { TransferenciaServico } from "../../src/application/TransferenciaServico";
+import { MemoriaContaRepositorio } from "../fake/MemoriaContaRepositorio";
+import { TransferenciaDTO } from "../../src/application/dto/TransferenciaDTO";
+import { Conta } from "../../src/model/Conta";
 
 describe("Transferência serviço", () =>{
 
