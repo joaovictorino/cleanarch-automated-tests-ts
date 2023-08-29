@@ -8,11 +8,11 @@ export class MemoriaContaRepositorio implements Repositorio<Conta, string> {
         this._dicionario = new Map<string, Conta>();
     }
 
-    public buscar(campo: string): Conta | undefined {
-        return this._dicionario.get(campo);
+    public buscar(numero: string): Conta | undefined {
+        return this._dicionario.get(numero);
     }
 
-    public adicionar(entidade: Conta): void {
-        this._dicionario.set(entidade.numero, entidade);
+    public adicionar(conta: Conta): void {
+        this._dicionario.set(conta.numero, conta);
     }
 }
