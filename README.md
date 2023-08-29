@@ -40,3 +40,5 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Criando a camada de aplicação](https://gist.github.com/joaovictorino/fd80a207c35bef460cee34291022a3ca)   
 [Validando fluxos alternativos de aplicação](https://gist.github.com/joaovictorino/50abe117aaa52633b88dec92b730b8fc)   
 [Refatorando o teste de aplicação](https://gist.github.com/joaovictorino/52600cfea9e651fab9212e9a385bd175)   
+[Trabalhando com mocks](https://gist.github.com/joaovictorino/61ad34bc4c5cc8d1048394381bb3757d)   
+[Jest com cobertura de código](https://gist.github.com/joaovictorino/223c12ce0c3c3f185674362fba571667)
