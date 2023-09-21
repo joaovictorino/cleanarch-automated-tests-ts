@@ -17,7 +17,7 @@ export class NumeroConta {
     }
 
     private temSeisDigitosNumericos(numero: string): boolean {
-        const regExp: RegExp = /^[0-9]{6}$/;
+        const regExp: RegExp = /^\d{6}$/;
         return regExp.test(numero);
     }
 }

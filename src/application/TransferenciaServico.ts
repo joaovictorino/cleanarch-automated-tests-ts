@@ -21,10 +21,10 @@ export class TransferenciaServico {
             throw Error("conta de destino não encontrada");
 
         const transferencia = new TransferenciaValor();
-        const recibo = transferencia.transferir(contaOrigem!, contaDestino!, dto.valor);
+        const recibo = transferencia.transferir(contaOrigem, contaDestino, dto.valor);
 
-        this._repositorio.adicionar(contaOrigem!);
-        this._repositorio.adicionar(contaDestino!);
+        this._repositorio.adicionar(contaOrigem);
+        this._repositorio.adicionar(contaDestino);
 
         return recibo.codigo;
     }

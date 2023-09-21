@@ -1,13 +1,14 @@
 #!/bin/bash
 
 npm init -y
-npm install typescript -g
-npm install typescript -D
+npm install typescript@5.1.6 -g
+npm install typescript@5.1.6 -D
 tsc --init
 npx gitignore node
 
-npm install jest -D
-npm install ts-jest -D
-npm install @types/jest -D
+npm install jest@29.6.2 -D
+npm install ts-jest@29.1.1 -D
+npm install @types/jest@29.5.3 -D
 npx ts-jest config:init
-# create account model and test
+
+npm install sonarqube-scanner@3.1.0 -D
