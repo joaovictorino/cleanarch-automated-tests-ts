@@ -12,3 +12,5 @@ npm install @types/jest@29.5.3 -D
 npx ts-jest config:init
 
 npm install sonarqube-scanner@3.1.0 -D
+npm run sonar:scanner
+

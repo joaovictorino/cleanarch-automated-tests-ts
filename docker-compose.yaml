@@ -1,0 +1,16 @@
+version: '3'
+
+networks:
+  devops:
+    driver: bridge
+
+services:
+  sonarqube:
+    image: sonarqube:10.2.1-community
+    container_name: sonarqube-server
+    ports:
+      - 9000:9000
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    networks:
+      - devops
