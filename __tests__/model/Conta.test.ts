@@ -22,6 +22,12 @@ describe("Conta", () => {
     expect(() => { conta.sacar(200.0); }).toThrow("saldo indisponível para operação");
   });
 
+  test("sacar todo o saldo", async () => {
+    const conta = criarConta();
+    conta.sacar(5000.0);
+    expect(conta.saldo).toBe(0);
+  });
+
   test("depositar com sucesso", async () => {
     const conta = criarConta();
     conta.depositar(200.0);

@@ -45,5 +45,5 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Rodando o SonarQube](https://gist.github.com/joaovictorino/85cbecc3d430a43e21ba80ccba5f78dc)   
 [Analisando nosso código](https://gist.github.com/joaovictorino/e21f9d556c5e028940c92ddb5a790550)   
 [Executando testes de mutação](https://gist.github.com/joaovictorino/23d6a53f634c141c34d068db01236a88)   
-[Corrigindo testes de mutação]()   
+[Corrigindo nossos testes](https://gist.github.com/joaovictorino/be42a717ecdd69cc1a29768401899b72)   
 [Testando com BDD]()   
