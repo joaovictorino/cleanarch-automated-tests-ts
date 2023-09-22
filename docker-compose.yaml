@@ -14,3 +14,16 @@ services:
       - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
     networks:
       - devops
+
+  jenkins:
+    image: jenkins/jenkins:2.414.2
+    container_name: jenkins-server
+    user: root
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8080:8080
+      - 50000:50000
+    networks:
+      - devops
