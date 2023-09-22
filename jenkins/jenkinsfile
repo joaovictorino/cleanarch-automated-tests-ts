@@ -1,0 +1,44 @@
+pipeline {
+  agent any
+    
+  tools {nodejs "node 18"}
+    
+  stages {
+        
+    stage('Clonando no GitHub') {
+      steps {
+        git 'https://github.com/joaovictorino/sample-automated-tests-ts.git'
+      }
+    }
+        
+    stage('Instalando dependências') {
+      steps {
+        sh 'npm install'
+      }
+    }
+     
+    stage('Executando o Jest') {
+      steps {
+         sh 'npx jest --coverage'
+      }
+    }
+    
+    stage('Executando o Stryker') {
+      steps {
+         sh 'npx stryker run'
+      }
+    }      
+    
+    stage('Executando o Cucumber') {
+      steps {
+         sh 'npm run test:cucumber'
+      }
+    }      
+    
+    stage('Executando o SonarQube') {
+      steps {
+         sh 'npm run sonar:scanner'
+      }
+    }      
+  }
+}
