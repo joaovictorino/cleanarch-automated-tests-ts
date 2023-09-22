@@ -14,3 +14,6 @@ npx ts-jest config:init
 npm install sonarqube-scanner@3.1.0 -D
 npm run sonar:scanner
 
+npm install @stryker-mutator/core@7.1.1 -D
+npx stryker init
+npx stryker run
