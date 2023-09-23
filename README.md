@@ -28,7 +28,7 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Testando outro fluxo de saque](https://gist.github.com/joaovictorino/74857497c704d667abd7f05cac536ec3)   
 [Testando outro fluxo de depósito](https://gist.github.com/joaovictorino/28245bd508b1559a303d87fc7f042190)   
 [Refatorando saque e depósito](https://gist.github.com/joaovictorino/15b963d6f1ba13d4d846049f7e551e8f)   
-[Saques deve possuir saldo](https://gist.github.com/joaovictorino/6ac61220b8ab70067513d525f7854d32)   
+[Saques devem possuir saldo](https://gist.github.com/joaovictorino/6ac61220b8ab70067513d525f7854d32)   
 [Número da conta com seis dígitos](https://gist.github.com/joaovictorino/334ee5785d7b5b19a782d56ffcf02dc2)   
 [Número da conta com fluxos alternativos](https://gist.github.com/joaovictorino/732145f92c4e3a5164a74d23a6e5c104)   
 [Conta, número da conta e refatoração](https://gist.github.com/joaovictorino/5393d166d79a7c2355f9857af856ec47)   
