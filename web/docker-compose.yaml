@@ -1,0 +1,18 @@
+version: "3"
+
+networks:
+  bank:
+    driver: bridge
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    ports:
+      - 3306:3306
+    networks:
+      - bank
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=bank
+      - MYSQL_TCP_PORT=3306

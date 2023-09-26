@@ -53,3 +53,4 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 
 ## Aula 03
 [Criando nosso projeto Next.js](https://gist.github.com/joaovictorino/90114d1e857741c88d9b79e1bfad489e)   
+[Adicionando o Prisma](https://gist.github.com/joaovictorino/33806a01fbd971ac90789b31daa7d693)   

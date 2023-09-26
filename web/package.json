@@ -13,9 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.3.1",
     "core": "*",
     "next": "^13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.3.1",
+    "ts-node": "^10.9.1"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
