@@ -49,4 +49,7 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Testando com BDD](https://gist.github.com/joaovictorino/bd4db6b5c2a15eea8675099b343e7c62)   
 [Subindo o código para o GitHub](https://gist.github.com/joaovictorino/da7cf1cf8cc42f76188525372c43ae9e)   
 [Subindo o Jenkins com Docker](https://gist.github.com/joaovictorino/cc2a8531dc7dbc24a3d668e08c5967ba)   
-[Executando os testes no Jenkins](https://gist.github.com/joaovictorino/cc2a8531dc7dbc24a3d668e08c5967ba)
+[Executando os testes no Jenkins](https://gist.github.com/joaovictorino/cc2a8531dc7dbc24a3d668e08c5967ba)   
+
+## Aula 03
+[Criando nosso projeto Next.js](https://gist.github.com/joaovictorino/90114d1e857741c88d9b79e1bfad489e)   
