@@ -57,3 +57,5 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Criando API de consulta de contas](https://gist.github.com/joaovictorino/d030cfc1b768ca2008c4c79fae21a5ea)   
 [Testes da API de consulta de contas](https://gist.github.com/joaovictorino/f16a0f28168a328b35bc9c0894f61cca)   
 [Mockando o prisma](https://gist.github.com/joaovictorino/d4537368c8c4e54a26fad39efb0b6164)   
+[Criando API de criação de contas](https://gist.github.com/joaovictorino/c022d6ffca926eed9c98a00672390676)   
+[Testes da API de criação de contas](https://gist.github.com/joaovictorino/4ebc43d10640fdf8fadcf48970e85742)   

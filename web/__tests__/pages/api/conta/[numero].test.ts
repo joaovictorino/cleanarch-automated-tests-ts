@@ -45,7 +45,7 @@ describe("API consulta de contas", () => {
         expect(res.statusCode).toBe(404);
         expect(res._getJSONData()).toMatchObject(
             expect.objectContaining({
-                mensagem: expect.any(String)
+                mensagem: "conta nao encontrada"
             })
         );
     });
