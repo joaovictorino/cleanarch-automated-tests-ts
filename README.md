@@ -55,5 +55,5 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Criando nosso projeto Next.js](https://gist.github.com/joaovictorino/90114d1e857741c88d9b79e1bfad489e)   
 [Adicionando o Prisma](https://gist.github.com/joaovictorino/33806a01fbd971ac90789b31daa7d693)   
 [Criando API de consulta de contas](https://gist.github.com/joaovictorino/d030cfc1b768ca2008c4c79fae21a5ea)   
-[]()   
-[]()   
+[Testes da API de consulta de contas](https://gist.github.com/joaovictorino/f16a0f28168a328b35bc9c0894f61cca)   
+[Mockando o prisma](https://gist.github.com/joaovictorino/d4537368c8c4e54a26fad39efb0b6164)   

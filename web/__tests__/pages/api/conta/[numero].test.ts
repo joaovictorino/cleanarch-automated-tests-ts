@@ -1,5 +1,7 @@
 import { createMocks } from "node-mocks-http";
+import { Conta } from "@prisma/client";
 import handler from "../../../../pages/api/conta/[numero]";
+import { prismaMock } from "../../../mock/prisma";
 
 describe("API consulta de contas", () => {
     test("consulta com sucesso", async() => {
@@ -10,6 +12,13 @@ describe("API consulta de contas", () => {
                 numero: "123456",
             }
         });
+
+        const conta: Conta = {
+            numero: "123456",
+            saldo: 100.0 
+        };
+
+        prismaMock.conta.findUnique.mockResolvedValue(conta);
 
         await handler(req, res);
         expect(res.statusCode).toBe(200);
@@ -26,9 +35,11 @@ describe("API consulta de contas", () => {
             method: "GET",
             url: "api/conta/",
             query: {
-                numero: "1234567",
+                numero: "123456",
             }
         });
+
+        prismaMock.conta.findUnique.mockResolvedValue(null);
 
         await handler(req, res);
         expect(res.statusCode).toBe(404);
