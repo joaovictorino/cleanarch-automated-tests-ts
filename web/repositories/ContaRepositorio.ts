@@ -11,7 +11,11 @@ export class ContaRepositorio implements Repositorio<Conta, string> {
             },
         });
 
-        return new Conta(conta.numero, conta.saldo);
+        if(conta !== null){
+            return new Conta(conta.numero, conta.saldo);
+        } else {
+            return null;
+        }
     }
 
     public async adicionar(conta: Conta) {

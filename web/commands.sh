@@ -10,3 +10,13 @@ npm install ts-node@10.9.1 -D
 # MySQL
 docker compose up -d
 
+# Jest
+npm install jest@29.6.2 -D
+npm install ts-jest@29.1.1 -D
+npm install @types/jest@29.5.3 -D
+npm install node-mocks-http@1.13.0 -D
+npx ts-jest config:init
+npx jest
+
+
+npm install jest-mock-extended@3.0.5 -D
