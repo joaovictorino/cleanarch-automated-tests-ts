@@ -10,9 +10,9 @@ export class TransferenciaServico {
         this._repositorio = repositorio;
     }
 
-    public transferir(dto: TransferenciaDTO): string {
-        const contaOrigem = this._repositorio.buscar(dto.contaOrigem);
-        const contaDestino = this._repositorio.buscar(dto.contaDestino);
+    public async transferir(dto: TransferenciaDTO): Promise<string> {
+        const contaOrigem = await this._repositorio.buscar(dto.contaOrigem);
+        const contaDestino = await this._repositorio.buscar(dto.contaDestino);
 
         if(contaOrigem === undefined) 
             throw Error("conta de origem não encontrada");

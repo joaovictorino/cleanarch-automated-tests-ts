@@ -25,9 +25,11 @@ class TransferenciaServicoStep {
   }
 
   @then("o saldo da conta {string} deve ser {float} e a conta {string} {float}")
-  public entaoSaldoDeveSer(numeroOrigem: string, resultadoOrigem: number, numeroDestino: string, resultadoDestino: number): void {
-    assert.equal(this.repositorio.buscar(numeroOrigem)?.saldo, resultadoOrigem);
-    assert.equal(this.repositorio.buscar(numeroDestino)?.saldo, resultadoDestino);
+  public async entaoSaldoDeveSer(numeroOrigem: string, resultadoOrigem: number, numeroDestino: string, resultadoDestino: number) {
+    const contaOrigem = await this.repositorio.buscar(numeroOrigem);
+    const contaDestino = await this.repositorio.buscar(numeroDestino);
+    assert.equal(contaOrigem!.saldo, resultadoOrigem);
+    assert.equal(contaDestino!.saldo, resultadoDestino);
   }
 }
 
