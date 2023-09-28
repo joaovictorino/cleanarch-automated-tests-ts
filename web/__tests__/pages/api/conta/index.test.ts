@@ -1,5 +1,5 @@
 import { createMocks } from "node-mocks-http";
-import handler from "../../../../pages/api/conta/index";
+import cadastrar from "../../../../pages/api/conta/index";
 import { prismaMock } from "../../../mock/prisma";
 
 describe("API criação de contas", () => {
@@ -15,7 +15,7 @@ describe("API criação de contas", () => {
 
         prismaMock.conta.create.mockResolvedValue(null);
 
-        await handler(req, res);
+        await cadastrar(req, res);
 
         expect(res.statusCode).toBe(201);
         expect(res._getJSONData()).toMatchObject(
@@ -37,7 +37,7 @@ describe("API criação de contas", () => {
 
         prismaMock.conta.findUnique.mockResolvedValue(null);
 
-        await handler(req, res);
+        await cadastrar(req, res);
         expect(res.statusCode).toBe(500);
         expect(res._getJSONData()).toMatchObject(
             expect.objectContaining({

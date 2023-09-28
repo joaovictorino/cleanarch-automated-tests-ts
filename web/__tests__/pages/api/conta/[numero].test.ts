@@ -1,6 +1,6 @@
 import { createMocks } from "node-mocks-http";
 import { Conta } from "@prisma/client";
-import handler from "../../../../pages/api/conta/[numero]";
+import consultar from "../../../../pages/api/conta/[numero]";
 import { prismaMock } from "../../../mock/prisma";
 
 describe("API consulta de contas", () => {
@@ -20,7 +20,7 @@ describe("API consulta de contas", () => {
 
         prismaMock.conta.findUnique.mockResolvedValue(conta);
 
-        await handler(req, res);
+        await consultar(req, res);
         expect(res.statusCode).toBe(200);
         expect(res._getJSONData()).toMatchObject(
             expect.objectContaining({
@@ -41,7 +41,7 @@ describe("API consulta de contas", () => {
 
         prismaMock.conta.findUnique.mockResolvedValue(null);
 
-        await handler(req, res);
+        await consultar(req, res);
         expect(res.statusCode).toBe(404);
         expect(res._getJSONData()).toMatchObject(
             expect.objectContaining({

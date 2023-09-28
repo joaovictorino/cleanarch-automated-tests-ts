@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { ContaRepositorio } from "../../../repositories/ContaRepositorio";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function consultar(req: NextApiRequest, res: NextApiResponse) {
 
     if(req.method === "GET") {
         const { numero } = req.query;

@@ -1,7 +1,7 @@
 import { createMocks } from "node-mocks-http";
 import { prismaMock } from "../../../mock/prisma";
 import { Conta, PrismaPromise } from "@prisma/client";
-import handler from "../../../../pages/api/conta/transferir";
+import transferir from "../../../../pages/api/conta/transferir";
 
 describe("API de transferência", () => {
     test("transferência com sucesso", async () => {
@@ -17,7 +17,7 @@ describe("API de transferência", () => {
 
         criarMockPrisma();
 
-        await handler(req, res);
+        await transferir(req, res);
 
         expect(res.statusCode).toBe(200);
         expect(res._getJSONData()).toMatchObject(
@@ -40,7 +40,7 @@ describe("API de transferência", () => {
 
         criarMockPrisma();
 
-        await handler(req, res);
+        await transferir(req, res);
 
         expect(res.statusCode).toBe(400);
         expect(res._getJSONData()).toMatchObject(

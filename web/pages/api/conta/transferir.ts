@@ -3,7 +3,7 @@ import { ContaRepositorio } from "../../../repositories/ContaRepositorio";
 import { TransferenciaServico } from "core/src/application/TransferenciaServico";
 import { TransferenciaDTO } from "core/src/application/dto/TransferenciaDTO";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function transferir(req: NextApiRequest, res: NextApiResponse) {
     if(req.method === "POST") {
         try {
             const body = req.body;

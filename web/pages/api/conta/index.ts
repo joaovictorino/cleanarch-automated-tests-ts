@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { ContaRepositorio } from "../../../repositories/ContaRepositorio";
 import { Conta } from "core/src/model/Conta";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function cadastrar(req: NextApiRequest, res: NextApiResponse) {
 
     if(req.method === "POST") {
         try {
