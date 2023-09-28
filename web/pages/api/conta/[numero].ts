@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const contaRepositorio = new ContaRepositorio();
         const conta = await contaRepositorio.buscar(numero.toString());
 
-        if(conta !== null){
+        if(conta !== undefined){
             res.status(200).json({ numero: conta.numero, saldo: conta.saldo });
         } else {
             res.status(404).json({ mensagem: "conta nao encontrada" });

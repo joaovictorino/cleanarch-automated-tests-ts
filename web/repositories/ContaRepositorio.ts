@@ -11,18 +11,25 @@ export class ContaRepositorio implements Repositorio<Conta, string> {
             },
         });
 
-        if(conta !== null){
+        if(conta !== null
+            && conta !== undefined){
             return new Conta(conta.numero, conta.saldo);
         } else {
-            return null;
+            return undefined;
         }
     }
 
     public async adicionar(conta: Conta) {
-        await prisma.conta.create({
-            data: {
+        await prisma.conta.upsert({
+            where: {
                 numero: conta.numero,
-                saldo: conta.saldo
+            },
+            update: {
+                saldo: conta.saldo,
+            },
+            create: {
+                numero: conta.numero,
+                saldo: conta.saldo,
             },
         });
     }
