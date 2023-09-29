@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { ContaRepositorio } from "../../../repositories/ContaRepositorio";
 import { Conta } from "core/src/model/Conta";
 
-export default async function cadastrar(req: NextApiRequest, res: NextApiResponse) {
+export default async function contas(req: NextApiRequest, res: NextApiResponse) {
 
     if(req.method === "POST") {
         try {
@@ -13,5 +13,11 @@ export default async function cadastrar(req: NextApiRequest, res: NextApiRespons
         } catch (error) {
             res.status(500).json({ mensagem: "erro" });
         }
+    }
+
+    if(req.method === "GET") {
+        const contaRepositorio = new ContaRepositorio();
+        const contas = await contaRepositorio.listar();
+        res.status(201).json(contas);
     }
 }

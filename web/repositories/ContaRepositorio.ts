@@ -19,6 +19,10 @@ export class ContaRepositorio implements Repositorio<Conta, string> {
         }
     }
 
+    public async listar(): Promise<Conta | undefined> {
+        return prisma.conta.findMany();
+    }
+
     public async adicionar(conta: Conta) {
         await prisma.conta.upsert({
             where: {

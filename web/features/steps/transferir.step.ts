@@ -1,6 +1,6 @@
 import { createMocks } from "node-mocks-http";
 import { binding, given, when, then } from "cucumber-tsflow";
-import cadastrar from "../../pages/api/contas/index";
+import contas from "../../pages/api/contas/index";
 import transferir from "../../pages/api/contas/transferir";
 import consultar from "../../pages/api/contas/[numero]";
 import assert from "assert";
@@ -20,7 +20,7 @@ class Transferir {
       }
     });
 
-    await cadastrar(mockOrigem.req, mockOrigem.res);
+    await contas(mockOrigem.req, mockOrigem.res);
     assert.equal(201, mockOrigem.res.statusCode);
 
     const mockDestino = createMocks({
@@ -32,7 +32,7 @@ class Transferir {
       }
     });
 
-    await cadastrar(mockDestino.req, mockDestino.res);
+    await contas(mockDestino.req, mockDestino.res);
     assert.equal(201, mockDestino.res.statusCode);
   }
 
