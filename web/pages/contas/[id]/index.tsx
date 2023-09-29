@@ -11,13 +11,13 @@
     return (
       <>
         <header>
-          <h1>Conta #{conta.numero.substr(0,6)}...</h1>
+          <h1>Conta {conta.numero}</h1>
         </header>
         <div className="card">
           <p><strong>Numero:</strong> {conta.numero}</p><p><strong>Saldo:</strong> {conta.saldo}</p>
         </div>
         <footer>
-          <a href="/contas" className="secondary-btn">Return to contas list</a>
+          <a href="/contas" className="secondary-btn">Retornar</a>
         </footer>
       </>
     )
@@ -25,7 +25,7 @@
 
   export async function getServerSideProps({ params }) {
     const conta = await prisma.conta.findUnique({
-      where: { id: params.id }
+      where: { numero: params.id }
     });
     return { props: { conta } }
   }

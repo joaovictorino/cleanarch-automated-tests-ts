@@ -1,8 +1,8 @@
 import { createMocks } from "node-mocks-http";
 import { binding, given, when, then } from "cucumber-tsflow";
-import cadastrar from "../../pages/api/conta/index";
-import transferir from "../../pages/api/conta/transferir";
-import consultar from "../../pages/api/conta/[numero]";
+import cadastrar from "../../pages/api/contas/index";
+import transferir from "../../pages/api/contas/transferir";
+import consultar from "../../pages/api/contas/[numero]";
 import assert from "assert";
 import { setTimeout } from 'timers/promises';
 
@@ -13,7 +13,7 @@ class Transferir {
   public async dadaDuasContas(numeroOrigem: string, saldoOrigem: number, numeroDestino: string, saldoDestino: number) {    
     const mockOrigem = createMocks({
       method: "POST",
-      url: "api/conta/",
+      url: "api/contas/",
       body: {
           numero: numeroOrigem,
           saldo: saldoOrigem
@@ -25,7 +25,7 @@ class Transferir {
 
     const mockDestino = createMocks({
       method: "POST",
-      url: "api/conta/",
+      url: "api/contas/",
       body: {
           numero: numeroDestino,
           saldo: saldoDestino
@@ -40,7 +40,7 @@ class Transferir {
   public async quandoTransferirValores(numeroOrigem: string, valor: number, numeroDestino: string) {
     const { req, res } = createMocks({
       method: "POST",
-      url: "api/conta/transferir",
+      url: "api/contas/transferir",
       body: {
           origem: numeroOrigem,
           destino: numeroDestino,
@@ -58,7 +58,7 @@ class Transferir {
 
     const mockOrigem = createMocks({
       method: "GET",
-      url: "api/conta/",
+      url: "api/contas/",
       query: {
           numero: numeroOrigem,
       }
@@ -69,7 +69,7 @@ class Transferir {
 
     const mockDestino = createMocks({
       method: "GET",
-      url: "api/conta/",
+      url: "api/contas/",
       query: {
           numero: numeroDestino,
       }

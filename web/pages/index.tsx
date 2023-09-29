@@ -5,16 +5,16 @@
     return (
       <>
         <header>
-          <h1>Dashboard</h1>
+          <h1>Banco XPTO</h1>
         </header>
         <div className="table">
           <div className="row header">
-            <div className="cell">Resource</div>
+            <div className="cell">Ações</div>
           </div>
           
       <div className="row">
         <div className="cell" data-title="resource">
-          <a href="contas">Contas</a>
+          <a href="contas">Acessar contas</a>
         </div>
       </div>
 

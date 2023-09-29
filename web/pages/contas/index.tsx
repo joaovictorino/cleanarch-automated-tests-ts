@@ -18,29 +18,28 @@
     return (
       <>
         <header>
-          <h1>All Contas</h1>
+          <h1>Contas</h1>
           <a href="/contas/create" className="secondary-btn">
-            + Create new conta
+            + Criar nova conta
           </a>
         </header>
         <div className="table">
           <div className="row header">
-            <div className="cell">Numero</div><div className="cell">Saldo</div>
-            <div className="cell">Actions</div>
+            <div className="cell">Número</div>
+            <div className="cell">Saldo</div>
+            <div className="cell">Ações</div>
           </div>
           {contas.map((conta) => (
             <div className="row" key={conta.numero}>
-              <div className="cell" data-title="numero">{conta.numero}</div><div className="cell" data-title="saldo">{conta.saldo}</div>
+              <div className="cell" data-title="numero">{conta.numero}</div>
+              <div className="cell" data-title="saldo">{conta.saldo}</div>
               <div className="cell actions" data-title="actions">
                 <div className="action-buttons">
                   <a href={`contas/${conta.numero}`} className="secondary-btn small">
-                    &#128065; Show
+                    &#128065; Ver
                   </a>
                   <a href={`contas/${conta.numero}/edit`} className="secondary-btn small">
-                    &#9998; Edit
-                  </a>
-                  <a href="#" onClick={() => handleDelete(conta.numero)} className="secondary-btn small danger">
-                    &#128465; Delete
+                    &#9998; Transferir
                   </a>
                 </div>
               </div>
@@ -48,7 +47,7 @@
           ))}
         </div>
         <footer>
-          <a href="/" className="secondary-btn">Return to Dashboard</a>
+          <a href="/" className="secondary-btn">Retornar</a>
         </footer>
       </>
     )

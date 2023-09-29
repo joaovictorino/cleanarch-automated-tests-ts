@@ -1,13 +1,13 @@
 import { createMocks } from "node-mocks-http";
 import { Conta } from "@prisma/client";
-import consultar from "../../../../pages/api/conta/[numero]";
+import consultar from "../../../../pages/api/contas/[numero]";
 import { prismaMock } from "../../../mock/prisma";
 
 describe("API consulta de contas", () => {
     test("consulta com sucesso", async() => {
         const { req, res } = createMocks({
             method: "GET",
-            url: "api/conta/",
+            url: "api/contas/",
             query: {
                 numero: "123456",
             }
@@ -33,7 +33,7 @@ describe("API consulta de contas", () => {
     test("consulta sem registro", async() => {
         const { req, res } = createMocks({
             method: "GET",
-            url: "api/conta/",
+            url: "api/contas/",
             query: {
                 numero: "123456",
             }

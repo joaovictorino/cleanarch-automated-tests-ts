@@ -1,13 +1,13 @@
 import { createMocks } from "node-mocks-http";
 import { prismaMock } from "../../../mock/prisma";
 import { Conta, PrismaPromise } from "@prisma/client";
-import transferir from "../../../../pages/api/conta/transferir";
+import transferir from "../../../../pages/api/contas/transferir";
 
 describe("API de transferência", () => {
     test("transferência com sucesso", async () => {
         const { req, res } = createMocks({
             method: "POST",
-            url: "api/conta/transferir",
+            url: "api/contas/transferir",
             body: {
                 origem: "123456",
                 destino: "654321",
@@ -30,7 +30,7 @@ describe("API de transferência", () => {
     test("transferência conta de origem inexistente", async () => {
         const { req, res } = createMocks({
             method: "POST",
-            url: "api/conta/transferir",
+            url: "api/contas/transferir",
             body: {
                 origem: "123455",
                 destino: "654321",
