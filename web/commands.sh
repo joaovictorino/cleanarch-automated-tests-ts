@@ -12,7 +12,7 @@ npx prisma init --datasource-provider mysql
 npx prisma migrate dev --name init
 npm install ts-node@10.9.1 -D
 
-# MySQL
+# MySQL (Docker)
 docker compose up -d
 
 # Jest
@@ -28,3 +28,7 @@ npm install swr@2.2.4
 # Playwright
 npm install @playwright/test@1.38.1 -D
 npx playwright install [chromium|firefox|webkit|msedge|chrome]
+
+# Docker
+docker build -t web .
+docker build -t migrate -f Dockerfile.migrate .

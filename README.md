@@ -13,6 +13,7 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 [Node v18 no Windows](https://www.youtube.com/watch?v=_R7cSg4um00)   
 [Git no Windows](https://www.youtube.com/watch?v=_RcVweTCvRE)   
 [Docker Desktop no Windows](https://www.youtube.com/watch?v=n0bxjsGi_BY)   
+[Python 3 no Windows]()   
 
 # Atividades
 
@@ -69,3 +70,10 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 15. [Unindo BDD e Playwright](https://gist.github.com/joaovictorino/d7e5fb04e4b69a2df607ee43b2ed60e3)   
 
 ## Aula 04
+1. [Conteinerizando a aplicação]()   
+2. [Iniciando os testes de desempenho]()   
+3. [Trabalhando a massa de dados]()   
+4. [Habilitando o Kubernetes local]()   
+5. [Criando os arquivos yaml]()   
+6. [Instalando o Chaos Toolkit]()   
+7. [Criando nossos experimentos]()

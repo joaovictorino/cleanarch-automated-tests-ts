@@ -1,0 +1,8 @@
+FROM node:18-alpine3.16 
+WORKDIR /app
+COPY . .
+RUN npm ci
+RUN rm /app/web/.env
+WORKDIR /app/web
+RUN npx prisma generate
+CMD ["npx", "prisma", "migrate", "reset", "-f"]
