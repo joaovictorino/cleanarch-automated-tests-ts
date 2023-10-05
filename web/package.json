@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest && npm run test:cucumber",
-    "test:cucumber": "cucumber-js -p default"
+    "test:cucumber": "cucumber-js -p default",
+    "playwright": "npx prisma migrate reset -f && npx playwright test"
   },
   "keywords": [],
   "author": "",

@@ -10,5 +10,5 @@ test('Transferir valor', async ({ page }) => {
   await page.locator('#valor').fill('100.00');
   await page.getByRole('button', { name: 'Salvar' }).click();
   await page.getByTestId('654321-ver').click();
-  await expect(page.getByText('Saldo:R$ 1400.00')).toBeVisible();
+  await expect(page.getByText('Saldo:R$ 1100.00')).toBeVisible();
 });
