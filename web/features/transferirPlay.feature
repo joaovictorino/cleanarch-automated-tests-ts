@@ -3,12 +3,11 @@ Funcionalidade: Transferir valores entre contas
     Validar a transferência de valores entre contas
 
     Cenário: Transferir valores com sucesso entre duas contas
-        Dada conta "<origem>" com saldo <saldoOrigem> e a conta "<destino>" com saldo <saldoDestino>
-        Quando a conta "<origem>" transferir <valor> para a conta "<destino>"
-        Então o saldo da conta "<origem>" deve ser <resultadoOrigem> e a conta "<destino>" <resultadoDestino>
+        Dada conta web "<origem>" com saldo <saldoOrigem> e a conta web "<destino>" com saldo <saldoDestino>
+        Quando a conta web "<origem>" transferir <valor> para a conta web "<destino>"
+        Então o saldo da conta web "<origem>" deve ser <resultadoOrigem> e a conta web "<destino>" <resultadoDestino>
 
     Exemplos:
-        | origem    | destino   | valor   | saldoOrigem | saldoDestino  | resultadoOrigem   | resultadoDestino |
-        | 987654    | 321654    | 1000.00 | 2000.00     | 100.00        | 1000.00           | 1100.00          |
-        | 222222    | 555555    | 2500.00 | 20000.00    | 0.00          | 17500.00          | 2500.00          |
-        | 111111    | 333333    | 5000.00 | 10000.00    | 5000.00       | 5000.00           | 10000.00         |
+        | origem    | destino   | valor   | saldoOrigem | saldoDestino | resultadoOrigem | resultadoDestino |
+        | 111111    | 333333    | 5000.00 | 10000.00    | 5000.00      | 5000.00         | 10000.00         |
+        | 666666    | 999999    | 500.00  | 700.00      | 200.00       | 200.00          | 700.00           |

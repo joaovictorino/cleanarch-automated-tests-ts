@@ -11,9 +11,8 @@ class TransferirPlay {
   private context;
   private page;
 
-  @given("conta {string} com saldo {float} e a conta {string} com saldo {float}")
+  @given("conta web {string} com saldo {float} e a conta web {string} com saldo {float}")
   public async dadaDuasContas(numeroOrigem: string, saldoOrigem: number, numeroDestino: string, saldoDestino: number) {    
-    //let browser: ChromiumBrowser = await chromium.launch({ headless: false });
     this.browser = await chromium.launch();
     this.context = await this.browser.newContext()
     this.page = await this.context.newPage()
@@ -35,7 +34,7 @@ class TransferirPlay {
     await this.page.getByRole('button', { name: 'Salvar' }).click();
   }
 
-  @when("a conta {string} transferir {float} para a conta {string}")
+  @when("a conta web {string} transferir {float} para a conta web {string}")
   public async quandoTransferirValores(numeroOrigem: string, valor: number, numeroDestino: string) {
     await this.page.getByTestId(`${numeroOrigem}-transferir`).click();
     await this.page.locator('#destino').click();
@@ -45,13 +44,16 @@ class TransferirPlay {
     await this.page.getByRole('button', { name: 'Salvar' }).click();
   }
 
-  @then("o saldo da conta {string} deve ser {float} e a conta {string} {float}")
+  @then("o saldo da conta web {string} deve ser {float} e a conta web {string} {float}")
   public async entaoSaldoDeveSer(numeroOrigem: string, resultadoOrigem: number, numeroDestino: string, resultadoDestino: number) {
     await this.page.getByTestId(`${numeroOrigem}-ver`).click();
     await expect(this.page.getByText(`Saldo:R$ ${resultadoOrigem.toFixed(2)}`)).toBeVisible();
     await this.page.getByRole('link', { name: 'Retornar' }).click();
     await this.page.getByTestId(`${numeroDestino}-ver`).click();
     await expect(this.page.getByText(`Saldo:R$ ${resultadoDestino.toFixed(2)}`)).toBeVisible();
+    await this.page.close();
+    await this.context.close();
+    await this.browser.close();
   }
 }
 
