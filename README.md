@@ -65,5 +65,7 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 11. [Criando as outras telas](https://gist.github.com/joaovictorino/3556f45bfd21ddbef0dfe494620dc780)   
 12. [Instalando e configurando o Playwright](https://gist.github.com/joaovictorino/0ade99dc775e9bf85997630ffc97de97)   
 13. [Criando o teste do nosso projeto](https://gist.github.com/joaovictorino/ecac716b679f999f2337b01ccb4bd58f)   
-14. [Criando através da interface]()   
+14. [Criando através da interface](https://gist.github.com/joaovictorino/f356b173a965461b7b171c80a350003e)   
 15. [Unindo BDD e Playwright]()   
+
+## Aula 04

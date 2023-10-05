@@ -29,10 +29,10 @@ export default function ContaIndex() {
             <div className="cell" data-title="saldo">R$ {conta.saldo.toFixed(2)}</div>
             <div className="cell actions" data-title="actions">
               <div className="action-buttons">
-                <a href={`contas/${conta.numero}`} data-testid={conta.numero} className="secondary-btn small">
+                <a href={`contas/${conta.numero}`} data-testid={`${conta.numero}-ver`} className="secondary-btn small">
                   &#128065; Ver
                 </a>
-                <a href={`contas/${conta.numero}/transferir`} className="secondary-btn small">
+                <a href={`contas/${conta.numero}/transferir`} data-testid={`${conta.numero}-transferir`} className="secondary-btn small">
                   &#9998; Transferir
                 </a>
               </div>
