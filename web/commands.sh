@@ -24,3 +24,7 @@ npx ts-jest config:init
 npm install jest-mock-extended@3.0.5 -D
 
 npm install swr@2.2.4
+
+# Playwright
+npm install @playwright/test@1.38.1 -D
+npx playwright install [chromium|firefox|webkit|msedge|chrome]

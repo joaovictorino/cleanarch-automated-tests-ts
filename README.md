@@ -63,3 +63,7 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 9. [Incluindo BDD nos testes de API](https://gist.github.com/joaovictorino/2a9f693fe15c52f47a7702d3dd56a850)   
 10. [Criando as telas iniciais](https://gist.github.com/joaovictorino/f53f451e6d4a208a7a9790149791d759)   
 11. [Criando as outras telas](https://gist.github.com/joaovictorino/3556f45bfd21ddbef0dfe494620dc780)   
+12. [Instalando e configurando o Playwright](https://gist.github.com/joaovictorino/0ade99dc775e9bf85997630ffc97de97)   
+13. [Criando o teste do nosso projeto](https://gist.github.com/joaovictorino/ecac716b679f999f2337b01ccb4bd58f)   
+14. [Criando através da interface]()   
+15. [Unindo BDD e Playwright]()   

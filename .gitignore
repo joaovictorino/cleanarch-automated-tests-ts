@@ -267,3 +267,6 @@ dist
 
 # stryker temp files
 .stryker-tmp
+
+playwright-report
+test-results

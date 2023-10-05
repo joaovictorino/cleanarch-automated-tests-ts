@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^9.5.1",
+    "@playwright/test": "^1.38.1",
     "@types/jest": "^29.5.3",
     "@types/react": "18.2.23",
     "cucumber-tsflow": "^4.1.1",
