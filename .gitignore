@@ -270,3 +270,4 @@ dist
 
 playwright-report
 test-results
+k6/summary.html

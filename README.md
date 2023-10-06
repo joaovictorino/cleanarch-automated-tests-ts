@@ -70,10 +70,12 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 15. [Unindo BDD e Playwright](https://gist.github.com/joaovictorino/d7e5fb04e4b69a2df607ee43b2ed60e3)   
 
 ## Aula 04
-1. [Conteinerizando a aplicação]()   
-2. [Iniciando os testes de desempenho]()   
-3. [Trabalhando a massa de dados]()   
-4. [Habilitando o Kubernetes local]()   
-5. [Criando os arquivos yaml]()   
-6. [Instalando o Chaos Toolkit]()   
-7. [Criando nossos experimentos]()
+1. [Conteinerizando a aplicação](https://gist.github.com/joaovictorino/49ba7aecce159ed15c078c7e4dde581b)   
+2. [Iniciando os testes de desempenho](https://gist.github.com/joaovictorino/cac03fbb7efc8c09a5dc0b401495965b)   
+3. [Testando a transferência por API](https://gist.github.com/joaovictorino/7ab933a49b2d27c5a2eeed80a631407c)   
+4. [Trabalhando com massa de dados]()   
+
+5. [Habilitando o Kubernetes local]()   
+6. [Criando os arquivos yaml]()   
+7. [Instalando o Chaos Toolkit]()   
+8. [Criando nossos experimentos]()

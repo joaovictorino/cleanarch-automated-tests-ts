@@ -32,3 +32,10 @@ npx playwright install [chromium|firefox|webkit|msedge|chrome]
 # Docker
 docker build -t web .
 docker build -t migrate -f Dockerfile.migrate .
+
+# K6
+k6 run ConsultarContaAPI.js
+k6 run --out json=test.json ConsultarContaAPI.js
+k6 run -e HOST_URL=localhost:3000 TransferenciaAPI.js
+
+# Chaos Toolkit
