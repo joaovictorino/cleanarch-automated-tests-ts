@@ -38,4 +38,13 @@ k6 run ConsultarContaAPI.js
 k6 run --out json=test.json ConsultarContaAPI.js
 k6 run -e HOST_URL=localhost:3000 TransferenciaAPI.js
 
+# Kubernetes
+kubectl apply -f 01-db.yaml
+kubectl apply -f 02-svc-db.yaml
+kubectl apply -f 03-migrate.yaml
+kubectl apply -f 04-app.yaml
+kubectl apply -f 05-svc-app.yaml
+kubectl get svc/app-svc
+kubectl get nodes -o wide
+
 # Chaos Toolkit
