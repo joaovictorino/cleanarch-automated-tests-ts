@@ -1,0 +1,50 @@
+{
+    "title": "Após o pod da aplicação ser derrubado ele voltará ao ar em menos de 10 segundos?",
+    "description": "Esperamos que o pod da aplicação volte ao ar em menos de 10 segundos",
+    "tags": ["kubernetes", "bank"],
+    "steady-state-hypothesis": {
+        "title": "Verificando se os pods estão disponíveis",
+        "probes": [
+            {
+                "name": "all-pod-available",
+                "type": "probe",
+                "tolerance": true,
+                "provider": {
+                    "type": "python",
+                    "module": "chaosk8s.probes",
+                    "func": "deployment_fully_available",
+                    "arguments": {
+                        "name": "app",
+                        "timeout": 20
+                    }
+                }
+            }
+        ]
+    },
+    "method": [
+        {
+            "type": "action",
+            "name": "deleting-pod-application",
+            "provider": {
+                "type": "python",
+                "module": "chaosk8s.pod.actions",
+                "func": "terminate_pods",
+                "arguments": {
+                    "label_selector": "app=app",
+                    "qty": 1,
+                    "rand": true,
+                    "grace_period": 0
+                }
+            }
+        },
+        {
+            "name": "application-returning-page",
+            "type": "probe",
+            "tolerance": 200,
+            "provider": {
+                "type": "http",
+                "url": "http://172.19.0.2:30737/api/contas"
+            }
+        }
+    ]
+}

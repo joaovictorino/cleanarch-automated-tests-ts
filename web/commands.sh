@@ -48,3 +48,6 @@ kubectl get svc/app-svc
 kubectl get nodes -o wide
 
 # Chaos Toolkit
+pip install chaostoolkit-kubernetes
+chaos run experiment-app.json
+chaos run experiment-db.json

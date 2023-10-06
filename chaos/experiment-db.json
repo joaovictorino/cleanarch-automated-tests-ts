@@ -1,0 +1,42 @@
+{
+    "title": "O banco de dados voltará ao ar com os dados corretos?",
+    "description": "Esperamos que o banco de dados volte ao ar com dados atualizados",
+    "tags": ["kubernetes", "bank"],
+    "steady-state-hypothesis": {
+        "title": "Verificando se a aplicação retorna a consulta",
+        "probes": [
+            {
+                "name": "application-returning-query",
+                "type": "probe",
+                "tolerance": 200,
+                "provider": {
+                    "type": "http",
+                    "url": "http://172.19.0.2:30737/api/contas/123456",
+                    "timeout": [ 10, 10 ]
+                }
+            }
+        ]
+    },
+    "method": [
+        {
+            "type": "action",
+            "name": "deleting-pod-database",
+            "provider": {
+                "type": "python",
+                "module": "chaosk8s.pod.actions",
+                "func": "terminate_pods",
+                "arguments": {
+                    "label_selector": "app=mysqldb-stfs",
+                    "qty": 1,
+                    "grace_period": 0
+                }
+            },
+            "pauses": {
+                "after": 20
+            }
+        },
+        {
+            "ref": "application-returning-query"
+        }
+    ]
+}
