@@ -77,5 +77,5 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 5. [Habilitando o Kubernetes local](https://gist.github.com/joaovictorino/466d0b885ed33d9c2f2d26b793bdf3a6)   
 6. [Subindo a aplicação](https://gist.github.com/joaovictorino/47c3775911a1d83dcf1b6360701e6c05)   
 7. [Instalando o Chaos Toolkit](https://gist.github.com/joaovictorino/e4278a346e27e07aa91b2fc00ed3cbb9)   
-8. [Criando nossos experimentos de aplicação]()   
-9. [Criando nossos experimentos de banco]()   
+8. [Criando experimento de aplicação](https://gist.github.com/joaovictorino/d8ef42fd0545346a182590647710e695)   
+9. [Criando experimento de banco](https://gist.github.com/joaovictorino/41c7b3380b854d86de0d470c14ca4308)   
