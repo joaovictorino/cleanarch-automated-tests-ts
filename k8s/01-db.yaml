@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: mysqldb-stfs
+  name: mysqldb-stfs
+spec:
+  selector:
+    matchLabels:
+      app: mysqldb-stfs
+  serviceName: "mysqldb-stfs"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysqldb-stfs
+    spec:
+      terminationGracePeriodSeconds: 20
+      containers:
+        - image: mysql:8.0
+          imagePullPolicy: Always
+          name: mysqldb-stfs
+          env:
+            - name: MYSQL_DATABASE
+              value: "bank"
+            - name: MYSQL_ROOT_PASSWORD
+              value: "root"
+            - name: MYSQL_TCP_PORT
+              value: "3306"
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: db-claim
+  volumeClaimTemplates:
+  - metadata:
+      name: db-claim
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "standard"
+      resources:
+        requests:
+          storage: 2Gi

@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migrate
+spec:
+  template:
+    spec:
+      containers:
+      - image: jhvs1984/migrate
+        imagePullPolicy: Always
+        name: migrate
+        env:
+          - name: DATABASE_URL
+            value: "mysql://root:root@mysqldb:3306/bank"
+        resources: {}
+      restartPolicy: OnFailure
+      serviceAccountName: ""
+status: {}

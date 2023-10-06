@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - image: jhvs1984/web
+        imagePullPolicy: Always
+        name: web
+        env:
+          - name: DATABASE_URL
+            value: "mysql://root:root@mysqldb:3306/bank"
+        resources: {}
+        ports:
+          - containerPort: 3000
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}
