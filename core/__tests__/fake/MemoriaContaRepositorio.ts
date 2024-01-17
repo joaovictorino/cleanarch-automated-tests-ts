@@ -1,7 +1,7 @@
 import { Repositorio } from "../../src/model/contract/Repositorio";
 import { Conta } from "../../src/model/Conta";
 
-export class MemoriaContaRepositorio implements Repositorio<Conta, string> {
+export class MemoriaContaRepositorio implements Repositorio<string, Conta> {
     private _dicionario: Map<string, Conta>;
 
     public constructor(){

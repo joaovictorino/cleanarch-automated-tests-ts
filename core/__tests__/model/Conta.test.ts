@@ -45,10 +45,10 @@ describe("Conta", () => {
   });
 });
 
-function criarConta() {
+function criarConta(): Conta {
   return new Conta("123456", 5000.0);
 };
 
-function criarContaSaldo199() {
+function criarContaSaldo199(): Conta {
   return new Conta("123456", 199.0);
 };

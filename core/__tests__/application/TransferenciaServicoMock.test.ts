@@ -63,7 +63,7 @@ function criarMock() {
     dicionario.set(contaOrigem.numero, contaOrigem);
     dicionario.set(contaDestino.numero, contaDestino);
 
-    const repositorio: jest.Mocked<Repositorio<Conta, string>> = {
+    const repositorio: jest.Mocked<Repositorio<string, Conta>> = {
         adicionar: jest.fn((entidade: Conta) => {
             dicionario.set(entidade.numero, entidade);
         }),

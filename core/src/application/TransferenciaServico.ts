@@ -2,11 +2,12 @@ import { Repositorio } from "../model/contract/Repositorio";
 import { Conta } from "../model/Conta";
 import { TransferenciaDTO } from "./dto/TransferenciaDTO";
 import { TransferenciaValor } from "../model/service/TransferenciaValor";
+import { Recibo } from "../model/Recibo";
 
 export class TransferenciaServico {
-    private _repositorio: Repositorio<Conta, string>;
+    private _repositorio: Repositorio<string, Conta>;
 
-    public constructor(repositorio: Repositorio<Conta, string>){
+    public constructor(repositorio: Repositorio<string, Conta>){
         this._repositorio = repositorio;
     }
 
@@ -20,8 +21,8 @@ export class TransferenciaServico {
         if(contaDestino === undefined)
             throw Error("conta de destino não encontrada");
 
-        const transferencia = new TransferenciaValor();
-        const recibo = transferencia.transferir(contaOrigem, contaDestino, dto.valor);
+        const transferencia: TransferenciaValor = new TransferenciaValor();
+        const recibo: Recibo = transferencia.transferir(contaOrigem, contaDestino, dto.valor);
 
         this._repositorio.adicionar(contaOrigem);
         this._repositorio.adicionar(contaDestino);
