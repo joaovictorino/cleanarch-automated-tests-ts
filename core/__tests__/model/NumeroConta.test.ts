@@ -2,7 +2,7 @@ import { NumeroConta } from "../../src/model/NumeroConta";
 
 describe("Número Conta", () => {
   test("conta com seis dígitos", async () => {
-    const numeroConta = new NumeroConta("123456");
+    const numeroConta: NumeroConta = new NumeroConta("123456");
     expect(numeroConta.numero).toBe("123456");
     expect(numeroConta.numero.length).toBe(6);
   });
