@@ -30,7 +30,6 @@ describe("Transferencia serviço mock", () => {
         const { repositorio } = criarMock();
 
         const transferenciaServico: TransferenciaServico = new TransferenciaServico(repositorio);
-
         const dto: TransferenciaDTO = new TransferenciaDTO("111111", "654321", 100.0);
 
         await expect(transferenciaServico.transferir(dto)).rejects.toEqual(Error("conta de origem não encontrada"));
@@ -44,7 +43,6 @@ describe("Transferencia serviço mock", () => {
         const { repositorio } = criarMock();
 
         const transferenciaServico: TransferenciaServico = new TransferenciaServico(repositorio);
-
         const dto: TransferenciaDTO = new TransferenciaDTO("123456", "222222", 100.0);
 
         await expect(transferenciaServico.transferir(dto)).rejects.toEqual(Error("conta de destino não encontrada"));

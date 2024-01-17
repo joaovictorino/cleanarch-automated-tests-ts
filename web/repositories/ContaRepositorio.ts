@@ -2,7 +2,7 @@ import { Repositorio } from "core/src/model/contract/Repositorio";
 import { Conta } from "core/src/model/Conta";
 import prisma from "../prisma/prisma";
 
-export class ContaRepositorio implements Repositorio<Conta, string> {
+export class ContaRepositorio implements Repositorio<string, Conta> {
 
     public async buscar(numero: string): Promise<Conta | undefined> {
         const conta = await prisma.conta.findUnique({

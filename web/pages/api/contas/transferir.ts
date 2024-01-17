@@ -7,10 +7,10 @@ export default async function transferir(req: NextApiRequest, res: NextApiRespon
     if(req.method === "POST") {
         try {
             const body = req.body;
-            const contaRepositorio = new ContaRepositorio();
-            const transferencia = new TransferenciaServico(contaRepositorio);
-            const dto = new TransferenciaDTO(body.origem, body.destino, Number(body.valor));
-            const recibo = await transferencia.transferir(dto);
+            const contaRepositorio: ContaRepositorio = new ContaRepositorio();
+            const transferencia: TransferenciaServico = new TransferenciaServico(contaRepositorio);
+            const dto: TransferenciaDTO = new TransferenciaDTO(body.origem, body.destino, Number(body.valor));
+            const recibo: string = await transferencia.transferir(dto);
             res.status(200).json({ recibo: recibo });
         } catch (error) {
             res.status(400).json({ mensagem: error.message });

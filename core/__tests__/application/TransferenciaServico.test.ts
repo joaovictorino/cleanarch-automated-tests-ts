@@ -44,9 +44,9 @@ describe("Transferência serviço", () =>{
 });
 
 function criarContaRepositorio(): Repositorio<string, Conta> {
-    const repositorio = new MemoriaContaRepositorio();
-    const contaOrigem = new Conta("123456", 5000);
-    const contaDestino = new Conta("654321", 5000);
+    const repositorio: MemoriaContaRepositorio = new MemoriaContaRepositorio();
+    const contaOrigem: Conta = new Conta("123456", 5000);
+    const contaDestino: Conta = new Conta("654321", 5000);
     repositorio.adicionar(contaOrigem);
     repositorio.adicionar(contaDestino);
     return repositorio;

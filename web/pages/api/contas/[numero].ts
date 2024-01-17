@@ -5,7 +5,7 @@ export default async function consultar(req: NextApiRequest, res: NextApiRespons
 
     if(req.method === "GET") {
         const { numero } = req.query;
-        const contaRepositorio = new ContaRepositorio();
+        const contaRepositorio: ContaRepositorio = new ContaRepositorio();
         const conta = await contaRepositorio.buscar(numero.toString());
 
         if(conta !== undefined){
