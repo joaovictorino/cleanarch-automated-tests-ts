@@ -11,16 +11,16 @@ class TransferenciaServicoStep {
 
   @given("conta {string} com saldo {float} e a conta {string} com saldo {float}")
   public dadaDuasContas(numeroOrigem: string, saldoOrigem: number, numeroDestino: string, saldoDestino: number): void {    
-    const contaOrigem = new Conta(numeroOrigem, saldoOrigem);
-    const contaDestino = new Conta(numeroDestino, saldoDestino);
+    const contaOrigem: Conta = new Conta(numeroOrigem, saldoOrigem);
+    const contaDestino: Conta = new Conta(numeroDestino, saldoDestino);
     this.repositorio.adicionar(contaOrigem);
     this.repositorio.adicionar(contaDestino);
   }
 
   @when("a conta {string} transferir {float} para a conta {string}")
   public quandoTransferirValores(numeroOrigem: string, valor: number, numeroDestino: string): void {
-    const transferenciaServico = new TransferenciaServico(this.repositorio);
-    const dto = new TransferenciaDTO(numeroOrigem, numeroDestino, valor);
+    const transferenciaServico: TransferenciaServico = new TransferenciaServico(this.repositorio);
+    const dto: TransferenciaDTO = new TransferenciaDTO(numeroOrigem, numeroDestino, valor);
     transferenciaServico.transferir(dto);
   }
 
