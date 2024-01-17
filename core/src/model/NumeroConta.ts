@@ -11,12 +11,12 @@ export class NumeroConta {
     }
 
     private validar(numero: string): void {
-        if(!this.temSeisDigitosNumericos(numero)){
+        if(!this.temSeisDigitos(numero)){
             throw new Error("número de conta inválida");
         }
     }
 
-    private temSeisDigitosNumericos(numero: string): boolean {
+    private temSeisDigitos(numero: string): boolean {
         const regExp: RegExp = /^\d{6}$/;
         return regExp.test(numero);
     }

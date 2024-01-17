@@ -7,8 +7,8 @@ describe("Número Conta", () => {
     expect(numeroConta.numero.length).toBe(6);
   });
 
-  test("conta com quatro dígitos", async () => {
-    expect(() => { new NumeroConta("3456"); }).toThrow("número de conta inválida");
+  test("conta com cinco dígitos", async () => {
+    expect(() => { new NumeroConta("23456"); }).toThrow("número de conta inválida");
   });
 
   test("conta com sete dígitos", async () => {
