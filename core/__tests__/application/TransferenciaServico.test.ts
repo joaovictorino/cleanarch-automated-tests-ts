@@ -4,7 +4,7 @@ import { TransferenciaDTO } from "../../src/application/dto/TransferenciaDTO";
 import { Conta } from "../../src/model/Conta";
 import { Repositorio } from "../../src/model/contract/Repositorio";
 
-describe("Transferência serviço", () =>{
+describe("Transferência Serviço", () =>{
 
     test("transferir com sucesso", async () => {
         const repositorio: Repositorio<string, Conta> = criarContaRepositorio();
