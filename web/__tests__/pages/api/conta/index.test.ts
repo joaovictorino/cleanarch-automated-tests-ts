@@ -39,10 +39,10 @@ describe("API criação de contas", () => {
 
         await contas(req, res);
         
-        expect(res.statusCode).toBe(500);
+        expect(res.statusCode).toBe(400);
         expect(res._getJSONData()).toMatchObject(
             expect.objectContaining({
-                mensagem: "erro"
+                mensagem: "número de conta inválida"
             })
         );
     });
