@@ -1,3 +1,5 @@
+import { NegocioErro } from "../error/NegocioErro";
+
 export class NumeroConta {
     private _numero: string;
 
@@ -12,7 +14,7 @@ export class NumeroConta {
 
     private validar(numero: string): void {
         if(!this.temSeisDigitos(numero)){
-            throw new Error("número de conta inválida");
+            throw new NegocioErro("número de conta inválida");
         }
     }
 

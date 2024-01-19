@@ -1,3 +1,4 @@
+import { NegocioErro } from "../error/NegocioErro";
 import { NumeroConta } from "./NumeroConta";
 
 export class Conta {
@@ -13,7 +14,7 @@ export class Conta {
       this.validarValor(valor);
       
       if((this._saldo - valor) < 0)
-        throw new Error("saldo indisponível para operação");
+        throw new NegocioErro("saldo indisponível para operação");
           
       this._saldo -= valor;
     }
@@ -34,6 +35,6 @@ export class Conta {
 
     private validarValor(valor: number): void {
       if(valor <= 0)
-        throw new Error("valor não pode ser igual ou menor que zero");
+        throw new NegocioErro("valor não pode ser igual ou menor que zero");
     }
   }  

@@ -3,6 +3,7 @@ import { Conta } from "../model/Conta";
 import { TransferenciaDTO } from "./dto/TransferenciaDTO";
 import { TransferenciaValor } from "../model/service/TransferenciaValor";
 import { Recibo } from "../model/Recibo";
+import { NegocioErro } from "../error/NegocioErro";
 
 export class TransferenciaServico {
     private _repositorio: Repositorio<string, Conta>;
@@ -16,10 +17,10 @@ export class TransferenciaServico {
         const contaDestino = await this._repositorio.buscar(dto.contaDestino);
 
         if(contaOrigem === undefined) 
-            throw Error("conta de origem não encontrada");
+            throw new NegocioErro("conta de origem não encontrada");
 
         if(contaDestino === undefined)
-            throw Error("conta de destino não encontrada");
+            throw new NegocioErro("conta de destino não encontrada");
 
         const transferencia: TransferenciaValor = new TransferenciaValor();
         const recibo: Recibo = transferencia.transferir(contaOrigem, contaDestino, dto.valor);
