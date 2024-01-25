@@ -1,4 +1,4 @@
-name: Core
+name: Core/Web
 
 on:
   push:
