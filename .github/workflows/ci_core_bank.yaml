@@ -1,0 +1,44 @@
+name: Bank
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout repository'
+        uses: actions/checkout@v2
+
+      - name: 'Set up NodeJS 18'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.17.1'
+
+      - name: 'Run tests'
+        working-directory: ./core
+        run: npx jest --coverage
+
+      - name: 'Run Stryker'
+        working-directory: ./core
+        run: npx stryker run
+
+      - name: 'Run Cucumber'
+        working-directory: ./core
+        run: npm run test:cucumber
+
+      - name: 'Upload Code Coverage'
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-reports
+          path: ./core/coverage/**/*
+          retention-days: 5
+
+      - name: 'Upload Mutation Tests'
+        uses: actions/upload-artifact@v2
+        with:
+          name: mutation-test-reports
+          path: ./core/reports/**/*
+          retention-days: 5
