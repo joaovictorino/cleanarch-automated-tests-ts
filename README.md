@@ -1,4 +1,4 @@
-[![core](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml)   
+[![core](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml) 
 [![core/web](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_bank.yaml)
 
 # Estória
