@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: '18.17.1'
 
+      - name: 'Install dependencies'
+        working-directory: ./core
+        run: npm install
+
       - name: 'Run tests'
         working-directory: ./core
         run: npx jest --coverage
