@@ -3,8 +3,6 @@ name: Core
 on:
   push:
     branches: [ master ]
-    paths:
-      - 'core/**'
 
 jobs:
   tests:
@@ -20,15 +18,19 @@ jobs:
           node-version: '18.17.1'
 
       - name: 'Install dependencies'
+        working-directory: ./core
         run: npm install
 
       - name: 'Run tests'
-        run: npx jest --coverage
+        working-directory: ./core
+        run: npm run test
 
       - name: 'Run Stryker'
-        run: npx stryker run
+        working-directory: ./core
+        run: npm run stryker
 
       - name: 'Run Cucumber'
+        working-directory: ./core
         run: npm run test:cucumber
 
       - name: 'Upload Code Coverage'

@@ -8,9 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest && npm run test:cucumber",
+    "test": "jest",
+    "prisma:migrate": "npx prisma migrate reset -f",
     "test:cucumber": "cucumber-js -p default",
-    "playwright": "npx prisma migrate reset -f && npx playwright test"
+    "playwright": "npx playwright test"
   },
   "keywords": [],
   "author": "",
