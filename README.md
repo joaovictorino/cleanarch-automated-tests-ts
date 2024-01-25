@@ -1,3 +1,6 @@
+[![core](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml)   
+[![core/web](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_bank.yaml)
+
 # Estória
 Eu como cliente   
 Gostaria de transferir dinheiro para a conta de outro cliente   
@@ -7,9 +10,6 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 - O número da conta deve possuir 6 dígitos
 - A conta de origem precisa ter saldo superior ou igual ao valor de transferência
 - O valor de transferência deve ser maior que zero
-
-[![core](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_core_bank.yaml)
-[![core/web](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_bank.yaml/badge.svg)](https://github.com/joaovictorino/cleanarch-automated-tests-ts/actions/workflows/ci_bank.yaml)
 
 # Instalações necessárias
 [VSCode no Windows](https://www.youtube.com/watch?v=zPHbeSBvdkg)   
