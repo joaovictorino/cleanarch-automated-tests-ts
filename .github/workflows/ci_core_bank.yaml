@@ -1,4 +1,5 @@
 name: Core
+run-name: Core
 
 on:
   push:

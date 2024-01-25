@@ -1,11 +1,12 @@
 name: Core/Web
+run-name: Core/Web
 
 on:
   push:
     branches: [ master ]
 
 jobs:
-  tests:
+  run:
     runs-on: ubuntu-latest
 
     steps:
