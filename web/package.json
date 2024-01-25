@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "prisma:generate": "npx prisma generate",
     "prisma:migrate": "npx prisma migrate reset -f",
     "test:cucumber": "cucumber-js -p default",
     "playwright": "npx playwright test"

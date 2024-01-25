@@ -17,8 +17,11 @@ jobs:
         with:
           node-version: '18.17.1'
 
-      - name: 'Install dependencies'
+      - name: 'Install npm dependencies'
         run: npm install --workspaces
 
-      - name: 'Run tests'
+      - name: 'Generate Prisma entities'
+        run: npm run prisma:generate -w web  
+
+      - name: 'Run core and web tests'
         run: npm run test --workspaces

@@ -12,12 +12,12 @@ jobs:
       - name: 'Checkout repository'
         uses: actions/checkout@v4
 
-      - name: 'Set up NodeJS 18'
+      - name: 'Set up Node 18'
         uses: actions/setup-node@v4
         with:
           node-version: '18.17.1'
 
-      - name: 'Install dependencies'
+      - name: 'Install npm dependencies'
         working-directory: ./core
         run: npm install
 
@@ -33,16 +33,16 @@ jobs:
         working-directory: ./core
         run: npm run test:cucumber
 
-      - name: 'Upload Code Coverage'
+      - name: 'Upload code coverage report'
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-reports
-          path: ./coverage/**/*
+          path: ./core/coverage/**/*
           retention-days: 5
 
-      - name: 'Upload Mutation Tests'
+      - name: 'Upload mutation tests report'
         uses: actions/upload-artifact@v4
         with:
           name: mutation-test-reports
-          path: ./reports/**/*
+          path: ./core/reports/**/*
           retention-days: 5
