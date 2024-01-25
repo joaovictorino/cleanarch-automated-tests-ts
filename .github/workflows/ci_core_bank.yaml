@@ -3,6 +3,8 @@ name: Core
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'core/**'
 
 jobs:
   tests:
@@ -18,31 +20,27 @@ jobs:
           node-version: '18.17.1'
 
       - name: 'Install dependencies'
-        working-directory: ./core
         run: npm install
 
       - name: 'Run tests'
-        working-directory: ./core
         run: npx jest --coverage
 
       - name: 'Run Stryker'
-        working-directory: ./core
         run: npx stryker run
 
       - name: 'Run Cucumber'
-        working-directory: ./core
         run: npm run test:cucumber
 
       - name: 'Upload Code Coverage'
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-reports
-          path: ./core/coverage/**/*
+          path: ./coverage/**/*
           retention-days: 5
 
       - name: 'Upload Mutation Tests'
         uses: actions/upload-artifact@v4
         with:
           name: mutation-test-reports
-          path: ./core/reports/**/*
+          path: ./reports/**/*
           retention-days: 5
