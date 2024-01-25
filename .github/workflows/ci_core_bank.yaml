@@ -1,5 +1,5 @@
-name: Core
-run-name: Core
+name: core
+run-name: core
 
 on:
   push:

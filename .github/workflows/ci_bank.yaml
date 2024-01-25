@@ -1,5 +1,5 @@
-name: Core/Web
-run-name: Core/Web
+name: core/web
+run-name: core/web
 
 on:
   push:
