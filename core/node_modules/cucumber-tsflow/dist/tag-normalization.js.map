@@ -1,0 +1,1 @@
+{"version":3,"file":"tag-normalization.js","sourceRoot":"","sources":["../src/tag-normalization.ts"],"names":[],"mappings":";;;;;;;;;;;;IAAA,SAAgB,YAAY,CAAC,GAAY;QACvC,8CAA8C;QAC9C,IAAI,GAAG,KAAK,SAAS,IAAI,GAAG,CAAC,QAAQ,CAAC,GAAG,CAAC,EAAE;YAC1C,OAAO,GAAG,CAAC;SACZ;QAED,wEAAwE;QACxE,OAAO,IAAI,GAAG,EAAE,CAAC;IACnB,CAAC;IARD,oCAQC"}

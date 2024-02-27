@@ -1,0 +1,11 @@
+export class MultiPreprocessor {
+    constructor(preprocessors) {
+        this.preprocessors = preprocessors;
+    }
+    async preprocess(project) {
+        for await (const preprocessor of this.preprocessors) {
+            await preprocessor.preprocess(project);
+        }
+    }
+}
+//# sourceMappingURL=multi-preprocessor.js.map
