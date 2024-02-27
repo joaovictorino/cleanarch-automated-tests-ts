@@ -70,14 +70,3 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 13. [Criando o teste do nosso projeto](https://gist.github.com/joaovictorino/ecac716b679f999f2337b01ccb4bd58f)   
 14. [Criando através da interface](https://gist.github.com/joaovictorino/f356b173a965461b7b171c80a350003e)   
 15. [Unindo BDD e Playwright](https://gist.github.com/joaovictorino/d7e5fb04e4b69a2df607ee43b2ed60e3)   
-
-## Aula 04
-1. [Conteinerizando a aplicação](https://gist.github.com/joaovictorino/49ba7aecce159ed15c078c7e4dde581b)   
-2. [Iniciando os testes de desempenho](https://gist.github.com/joaovictorino/cac03fbb7efc8c09a5dc0b401495965b)   
-3. [Testando a transferência por API](https://gist.github.com/joaovictorino/7ab933a49b2d27c5a2eeed80a631407c)   
-4. [Trabalhando com massa de dados](https://gist.github.com/joaovictorino/5557d233d2dac9bb2f90c9ab1757f468)   
-5. [Habilitando o Kubernetes local](https://gist.github.com/joaovictorino/466d0b885ed33d9c2f2d26b793bdf3a6)   
-6. [Subindo a aplicação](https://gist.github.com/joaovictorino/47c3775911a1d83dcf1b6360701e6c05)   
-7. [Instalando o Chaos Toolkit](https://gist.github.com/joaovictorino/e4278a346e27e07aa91b2fc00ed3cbb9)   
-8. [Criando experimento de aplicação](https://gist.github.com/joaovictorino/d8ef42fd0545346a182590647710e695)   
-9. [Criando experimento de banco](https://gist.github.com/joaovictorino/41c7b3380b854d86de0d470c14ca4308)   
