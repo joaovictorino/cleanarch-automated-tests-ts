@@ -38,18 +38,3 @@ Gostaria de transferir dinheiro para a conta de outro cliente
 15. [Criando a transferência](https://gist.github.com/joaovictorino/7b3fc68e66d64ac950c402b92db40f41)   
 16. [Criando o recibo de transferência](https://gist.github.com/joaovictorino/51cbe1bbf6db94563bf902657a82ef83)   
 17. [Unindo recibo e transferência](https://gist.github.com/joaovictorino/39976a2704232a417292306fe434a6c0)   
-
-## Aula 02
-1. [Criando a camada de aplicação](https://gist.github.com/joaovictorino/fd80a207c35bef460cee34291022a3ca)   
-2. [Validando fluxos alternativos de aplicação](https://gist.github.com/joaovictorino/50abe117aaa52633b88dec92b730b8fc)   
-3. [Refatorando o teste de aplicação](https://gist.github.com/joaovictorino/52600cfea9e651fab9212e9a385bd175)   
-4. [Trabalhando com mocks](https://gist.github.com/joaovictorino/61ad34bc4c5cc8d1048394381bb3757d)   
-5. [Jest com cobertura de código](https://gist.github.com/joaovictorino/223c12ce0c3c3f185674362fba571667)   
-6. [Rodando o SonarQube com Docker](https://gist.github.com/joaovictorino/85cbecc3d430a43e21ba80ccba5f78dc)   
-7. [Analisando nosso código](https://gist.github.com/joaovictorino/e21f9d556c5e028940c92ddb5a790550)   
-8. [Executando testes de mutação](https://gist.github.com/joaovictorino/23d6a53f634c141c34d068db01236a88)   
-9. [Corrigindo nossos testes](https://gist.github.com/joaovictorino/be42a717ecdd69cc1a29768401899b72)   
-10. [Testando com BDD](https://gist.github.com/joaovictorino/bd4db6b5c2a15eea8675099b343e7c62)   
-11. [Subindo o código para o GitHub](https://gist.github.com/joaovictorino/da7cf1cf8cc42f76188525372c43ae9e)   
-12. [Subindo o Jenkins com Docker](https://gist.github.com/joaovictorino/cc2a8531dc7dbc24a3d668e08c5967ba)   
-13. [Executando os testes no Jenkins](https://gist.github.com/joaovictorino/b406ff57b0cb688453f0220438dcae03)   
