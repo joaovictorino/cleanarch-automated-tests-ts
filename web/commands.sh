@@ -23,6 +23,10 @@ npm install node-mocks-http@1.13.0 -D
 npx ts-jest config:init
 npm install jest-mock-extended@3.0.5 -D
 
+# Postman
+postman collection run Bank.postman_collection.json
+
+# Next JS 
 npm install swr@2.2.4
 
 # Playwright
