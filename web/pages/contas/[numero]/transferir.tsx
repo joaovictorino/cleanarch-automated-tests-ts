@@ -13,28 +13,24 @@ export default function ContaTransferir() {
   if (error) return <div>Falha ao carregar</div>
   if (!data) return <div>Carregando ...</div>
 
-  function handleSubmit (e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit (e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     formState.origem = data.numero;
-    fetch("/api/contas/transferir", {
+    const response = await fetch("/api/contas/transferir", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(formState)
-    })
-    .then((res) => {
-        if(res.ok)
-            return res.json();
-        else
-            return undefined;
-    })
-    .then((data) => {
-        if(data) {
-            alert(`Recibo ${data.recibo}`)
-            router.push("/contas")
-        }
     });
+
+    const dataResponse = await response.json();
+    if (response.ok){
+      alert(`Recibo ${dataResponse.recibo}`)
+      router.push("/contas");
+    } else {
+      alert(dataResponse.mensagem);
+    }
   }
 
   return (

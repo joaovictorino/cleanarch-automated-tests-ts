@@ -5,21 +5,23 @@ export default function ContaCriar() {
   const [formState, setFormState] = useState({ numero: "",saldo: 0, })
   const router = useRouter();
 
-  function handleSubmit (e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit (e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    fetch("/api/contas", {
+    const response = await fetch("/api/contas", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(formState)
-    })
-    .then((res) => {
-      if (res.ok) {
-        alert("Conta criada!")
-        router.push("/contas")
-      }
     });
+
+    if (response.ok) {
+      alert("Conta criada!");
+      router.push("/contas");
+    } else {
+      const data = await response.json();
+      alert(data.mensagem);
+    }
   }
 
   return (

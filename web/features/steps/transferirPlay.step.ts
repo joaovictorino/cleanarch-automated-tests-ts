@@ -1,21 +1,23 @@
 import { binding, given, when, then } from "cucumber-tsflow";
 import { expect } from '@playwright/test';
 import {
-	ChromiumBrowser,
-	chromium
+	Browser,
+	chromium,
+  BrowserContext,
+  Page
 } from '@playwright/test';
 
 @binding()
 class TransferirPlay {
-  private browser: ChromiumBrowser;
-  private context;
-  private page;
+  private browser: Browser;
+  private context: BrowserContext;
+  private page: Page;
 
-  @given("conta web {string} com saldo {float} e a conta web {string} com saldo {float}")
+  @given("conta web {string} com saldo {float} e a conta web {string} com saldo {float}", { timeout: -1 })
   public async dadaDuasContas(numeroOrigem: string, saldoOrigem: number, numeroDestino: string, saldoDestino: number) {    
     this.browser = await chromium.launch();
-    this.context = await this.browser.newContext()
-    this.page = await this.context.newPage()
+    this.context = await this.browser.newContext();
+    this.page = await this.context.newPage();
     await this.page.goto('http://localhost:3000/');
     await this.page.getByRole('link', { name: 'Acessar Contas' }).click();
 
