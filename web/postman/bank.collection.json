@@ -209,7 +209,7 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Body matches string\", function () {",
+							"pm.test(\"Retornou recibo\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"recibo\");",
 							"});"
 						],
@@ -255,7 +255,7 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(400);",
 							"});",
-							"pm.test(\"Your test name\", function () {",
+							"pm.test(\"Mensagem de erro\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.mensagem).to.eql(\"valor não pode ser igual ou menor que zero\");",
 							"});"
@@ -302,7 +302,7 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(400);",
 							"});",
-							"pm.test(\"Your test name\", function () {",
+							"pm.test(\"Mensagem de erro\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.mensagem).to.eql(\"conta de destino não encontrada\");",
 							"});"
