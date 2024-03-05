@@ -23,6 +23,6 @@ export default async function contas(req: NextApiRequest, res: NextApiResponse) 
     if(req.method === "GET") {
         const contaRepositorio: ContaRepositorio = new ContaRepositorio();
         const contas = await contaRepositorio.listar();
-        res.status(201).json(contas);
+        res.status(200).json(contas);
     }
 }
