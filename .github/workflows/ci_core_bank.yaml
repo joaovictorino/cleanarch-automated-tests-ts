@@ -24,10 +24,6 @@ jobs:
 
       - name: 'Run tests'
         working-directory: ./core
-        run: npm run test
-
-      - name: 'Code coverage'
-        working-directory: ./core
         run: npx jest --coverage
 
       - name: 'Run Stryker'
