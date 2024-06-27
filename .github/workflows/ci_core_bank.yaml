@@ -24,7 +24,7 @@ jobs:
 
       - name: 'Run tests'
         working-directory: ./core
-        run: npm run test --coverage
+        run: npm run jest --coverage
 
       - name: 'Run Stryker'
         working-directory: ./core
