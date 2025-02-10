@@ -17,5 +17,5 @@ describe("Recibo", () => {
     const recibo2: Recibo = new Recibo();
     expect(BigInt(recibo1.codigo).valueOf()).toBeGreaterThan(0);
     expect(BigInt(recibo2.codigo).valueOf()).toBeGreaterThan(0);
-});
+  });
 });
