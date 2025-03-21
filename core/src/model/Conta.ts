@@ -13,8 +13,8 @@ export class Conta {
     public sacar(valor: number): void {
       this.validarValor(valor);
       
-      if((this._saldo - valor) < 0)
-        throw new NegocioErro("saldo indisponível para operação");
+      if (valor > this._saldo)
+        throw new NegocioErro('saldo indisponível para operação');
           
       this._saldo -= valor;
     }
