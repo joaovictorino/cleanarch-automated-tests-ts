@@ -16,10 +16,10 @@ export class TransferenciaServico {
         const contaOrigem = await this._repositorio.buscar(dto.contaOrigem);
         const contaDestino = await this._repositorio.buscar(dto.contaDestino);
 
-        if(contaOrigem === undefined) 
+        if(!contaOrigem) 
             throw new NegocioErro("conta de origem não encontrada");
 
-        if(contaDestino === undefined)
+        if(!contaDestino)
             throw new NegocioErro("conta de destino não encontrada");
 
         const transferencia: TransferenciaValor = new TransferenciaValor();
