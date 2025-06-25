@@ -6,11 +6,11 @@ import { TransferenciaServico } from "../../src/application/TransferenciaServico
 import { TransferenciaDTO } from "../../src/application/dto/TransferenciaDTO";
 
 @binding()
-class TransferenciaServicoStep {
+export class TransferenciaServicoStep {
   private repositorio = new MemoriaContaRepositorio();
 
   @given("conta {string} com saldo {float} e a conta {string} com saldo {float}")
-  public dadaDuasContas(numeroOrigem: string, saldoOrigem: number, numeroDestino: string, saldoDestino: number): void {    
+  public dadaDuasContas(numeroOrigem: string, saldoOrigem: number, numeroDestino: string, saldoDestino: number): void {
     const contaOrigem: Conta = new Conta(numeroOrigem, saldoOrigem);
     const contaDestino: Conta = new Conta(numeroDestino, saldoDestino);
     this.repositorio.adicionar(contaOrigem);
@@ -32,5 +32,3 @@ class TransferenciaServicoStep {
     assert.equal(contaDestino!.saldo, resultadoDestino);
   }
 }
-
-export = TransferenciaServico;
